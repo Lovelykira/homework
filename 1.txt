@@ -1,0 +1,31 @@
+JavaScript
+
+1.123 == ‘123’      true
+  123 === ‘123’     false
+  ‘’ == false       true
+  ‘’ === false      false
+  ‘00000’ == false  true
+  ‘0000’ === false  false
+
+2. 1 + ‘12’         112
+   1 – ’12’	    -11
+   1 + ‘abv’        1abv
+   1 – ‘abv’        NaN
+
+3. 1
+
+4. 10
+   10
+
+MySQL
+
+1.SELECT COUNT(*)
+FROM  pc
+WHERE hdd IN (SELECT MIN(hdd) FROM pc)
+
+2.SELECT tbl1.id, 
+(SELECT COUNT(*) FROM tbl WHERE tbl.p_id=tbl1.id) as cnt
+FROM tbl as tbl1
+
+3.DELETE t1 FROM table t1, table t2
+WHERE t1.value = t2.value AND t1.id > t2.id;
